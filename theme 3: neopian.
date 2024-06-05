@@ -107,6 +107,7 @@
         <meta name="if:Banner Cover" content="0"/>
         <meta name="if:Search" content="0"/>
         <meta name="if:Clock" content="0"/>
+        <meta name="if:Space Between Time And Period" content="0"/>
         <meta name="if:Big Logo" content="0"/>
         <meta name="if:Adjust Logo Height" content="0"/>
         <meta name="if:Adjust Navigation" content="0"/>
@@ -267,11 +268,11 @@ margin-bottom: 5px;
 #navigation {
 position: fixed;
 top: 160px;
-{block:ifBigLogo}left: 988px;{/block:ifBigLogo}
+{block:ifBigLogo}left: 942px;{/block:ifBigLogo}
 {block:ifNotBigLogo}left: 737px;{/block:ifNotBigLogo}
 {block:ifAdjustNavigation}left: {text:Move Navigation}px;{/block:ifAdjustNavigation}
-{block:ifBigLogo}width: 429px;{/block:ifBigLogo}
-{block:ifNotBigLogo}width: 680px;{/block:ifNotBigLogo}
+{block:ifBigLogo}width: 460px;{/block:ifBigLogo}
+{block:ifNotBigLogo}width: 665px;{/block:ifNotBigLogo}
 {block:ifAdjustNavigationWidth}width: {text:Navigation Width}px;{/block:ifAdjustNavigationWidth}
 text-align: center;
 padding: 18px;
@@ -292,7 +293,6 @@ font-weight: bold;
 color: {color:Navigation Links};
 font-size: 20px;
 margin: 10px;
-font-family: Times;
 }
    
 #navigation a:hover {
@@ -304,7 +304,6 @@ color: {color:Navigation Links};
 font-size: 20px;
 background: none;
 border: none;
-font-family: Times;
 font-weight: bold;
 }
 
@@ -339,8 +338,8 @@ color: {color:Navigation Links Hover};
 #time {
 position: fixed;
 top: 145px;
-left: 1440px;
-width: 105px;
+left: 1425px;
+width: 120px;
 text-align: center;
 padding: 18px;
 border-top: 1px solid {color:Navigation Borders};
@@ -582,7 +581,6 @@ margin-top: 75px;
 
         </style>
         
-
         <script>
 setInterval(showTime, 1000);
  
@@ -591,8 +589,7 @@ function showTime() {
     let hour = time.getHours();
     let min = time.getMinutes();
     let sec = time.getSeconds();
-    am_pm = "AM";
- 
+
     if (hour >= 12) {
         if (hour > 12) hour -= 12;
         am_pm = " PM";
@@ -865,4 +862,3 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
 
     </body>
 </html>
-
