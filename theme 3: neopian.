@@ -486,25 +486,25 @@ color: {color:Tags Links};
 color: {color:Tags Links Hover};
 }
 
-#permalink {
+.permalink {
 width: 740px;
-float: left;
+text-align: left;
 padding: 10px;
-margin-top: -30px;
-margin-bottom: 30px;
 margin-left: -30px;
+margin-top: -30px;
+margin-bottom: 15px;
 color: {color:Permalink Links};
 background: {color:Permalink};
 border-bottom: 1px solid {color:Borders};
 font-size: 22px;
 }
      
-#permalink a {
+.permalink a {
 margin: 2px;
 color: {color:Permalink Links};
 }
     
-#permalink a:hover {
+.permalink a:hover {
 color: {color:Permalink Links Hover};
 letter-spacing: 0px;
 }
@@ -718,7 +718,7 @@ showTime();
 
 {block:HomePage}{block:PinnedPostLabel}<div class="pinned"><a href="{Permalink}">Pinned</a></div>{/block:PinnedPostLabel}{/block:HomePage} 
 
-<div id="permalink">
+<div class="permalink">
 
 <a href="{Permalink}">Posted at {12Hour}:{Minutes} {CapitalAmPm} on {MonthNumber}/{DayOfMonth}/{Year}</a>{block:NoteCount}<a href="{Permalink}">with {NoteCountWithLabel}</a>{/block:NoteCount} 
 
